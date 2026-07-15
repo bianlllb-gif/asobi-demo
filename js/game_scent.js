@@ -86,10 +86,9 @@ function action(pid){
   clrT();if(G&&G.setBg)G.setBg(imgs[pid]);
   var dur=30+mistakes*10,r=dur,mi=0;
   var pool=actPool[pid],pi=0;
-  var imgTimer=setInterval(function(){if(r>0&&G&&G.setBg){pi++;G.setBg(pool[pi%pool.length]);}},4000);
-  timers.push(imgTimer);
+  var imgT=setInterval(function(){if(r>0){pi++;G.setBg(pool[pi%pool.length]);}},4000);
   function tick(){
-    if(r<=0){gb.innerHTML='<div style="color:#ff6b9d;font-size:20px;">停。手拿开。</div>';timers.push(setTimeout(function(){lock=false;matched>=8?_final():render();},1500));return;}
+    if(r<=0){clearInterval(imgT);gb.innerHTML='<div style="color:#ff6b9d;font-size:20px;">停。手拿开。</div>';timers.push(setTimeout(function(){lock=false;matched>=8?_final():render();},1500));return;}
     if(r%3===0)mi++;if(r%2===0)heel();
     var off=Math.round(276*(1-r/dur));
     var circ='<svg width="60" height="60" viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="2"/><circle cx="50" cy="50" r="44" fill="none" stroke="#ff6b9d" stroke-width="2" stroke-dasharray="276" stroke-dashoffset="'+off+'" transform="rotate(-90 50 50)" stroke-linecap="round"/><text x="50" y="56" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold">'+r+'</text></svg>';
