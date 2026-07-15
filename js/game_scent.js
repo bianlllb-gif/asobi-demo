@@ -125,8 +125,8 @@ function _sClick(side,pid){
 function _final(){
   clrT();if(G&&G.setBg)G.setBg(IMG_POOL[Math.floor(Math.random()*IMG_POOL.length)]);
   var msgs=EDGE_MSGS,i=0;
-  function r(){gb.innerHTML='<div style="background:rgba(0,0,0,.65);border-radius:12px;padding:22px;text-align:center;"><div style="color:#ff6b9d;font-size:18px;">最终寸止</div><div style="color:#ccc;font-size:13px;margin:6px 0;">撸到快射了——然后停。不准射。</div><div id="_fmsg" style="color:#ffcc80;font-size:14px;min-height:22px;margin:8px 0;">'+msgs[0]+'</div><button class="cb" id="_farr" style="background:#ff6b9d88;color:#fff;font-size:20px;padding:12px 36px;">快射了</button></div>';
-    document.getElementById('_farr').onclick=function(){clrT();gb.innerHTML='<div style="color:#ff6b9d;font-size:20px;">停。不准射。</div><div style="color:#ccc;font-size:13px;margin:6px 0;">手拿开。今天到此为止。</div>';timers.push(setTimeout(_end,2000));};
+  function r(){gb.innerHTML='<div style="background:rgba(0,0,0,.65);border-radius:12px;padding:22px;text-align:center;"><div style="color:#ff6b9d;font-size:18px;">最终寸止</div><div style="color:#ddd;font-size:14px;margin:6px 0;">撸到快射了——然后停。不准射。</div><div id="_fmsg" style="color:#ffcc80;font-size:14px;min-height:22px;margin:8px 0;">'+msgs[0]+'</div><button class="cb" id="_farr" style="background:#ff6b9d88;color:#fff;font-size:20px;padding:12px 36px;">快射了</button></div>';
+    document.getElementById('_farr').onclick=function(){clrT();gb.innerHTML='<div style="color:#ff6b9d;font-size:20px;">停。不准射。</div><div style="color:#ddd;font-size:14px;margin:6px 0;">手拿开。今天到此为止。</div>';timers.push(setTimeout(_end,2000));};
     timers.push(setInterval(function(){i++;var e=document.getElementById('_fmsg');if(e)e.textContent=msgs[i%msgs.length];},4000));
   }
   r();
@@ -153,7 +153,7 @@ function _end(){
 
 gb.innerHTML='<div style="color:#ff6b9d;font-size:18px;">气味记忆</div>'+
   '<div style="color:#ffcc80;font-size:12px;margin-bottom:4px;">—— 苏婉</div>'+
-  '<div style="color:#ccc;font-size:13px;line-height:1.8;margin:8px 0;">八种味道。八张图。把它们配成对。<br><br>配成一对——袜子套上去。手握住。上下动。三十秒。<br>配错一次——多罚十秒。全配完——寸止。<br><br>去拿袜子。闻清楚。别想着蒙混过关。<br>我看着你呢。</div>'+
+  '<div style="color:#ddd;font-size:14px;line-height:1.8;margin:8px 0;">八种味道。八张图。把它们配成对。<br><br>配成一对——袜子套上去。手握住。上下动。三十秒。<br>配错一次——多罚十秒。全配完——寸止。<br><br>去拿袜子。闻清楚。别想着蒙混过关。<br>我看着你呢。</div>'+
   '<button class="cb" id="_ready" style="background:#ff6b9d88;color:#fff;margin-top:8px;">准备好了</button>';
 await new Promise(function(rs){document.getElementById('_ready').onclick=function(){rs();};});
 render();

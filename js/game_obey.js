@@ -110,7 +110,7 @@ async function po(){
     function show_intro(){
       gb.innerHTML='<div style="color:#ff6b9d;font-size:18px;">服从测试</div>'+
         '<div style="color:#ffcc80;font-size:12px;margin-bottom:6px;">—— 苏婉</div>'+
-        '<div style="color:#ccc;font-size:13px;line-height:1.6;margin:6px 0;">5个问题。我要你最诚实的答案。<br>坦白——有奖励。含糊——我看着你。回避——我有办法让你说。撒谎——你会后悔。<br>每答完一题，根据你的态度，我会让你做一件事。<br>准备好了？看着我的眼睛。回答。</div>'+
+        '<div style="color:#ddd;font-size:14px;line-height:1.6;margin:6px 0;">5个问题。我要你最诚实的答案。<br>坦白——有奖励。含糊——我看着你。回避——我有办法让你说。撒谎——你会后悔。<br>每答完一题，根据你的态度，我会让你做一件事。<br>准备好了？看着我的眼睛。回答。</div>'+
         '<button class="cb" style="background:#ff6b9d88;color:#fff;margin-top:6px;" id="ostart">开始</button>';
       document.getElementById('ostart').onclick=function(){_o_next=next_q;next_q();};
     }
@@ -174,7 +174,7 @@ async function po(){
         var hb=0;
         gb.innerHTML='<div style="background:rgba(0,0,0,.7);border-radius:12px;padding:22px;text-align:center;box-shadow:'+glow+';">'+
           '<div style="color:'+color+';font-size:20px;margin-bottom:4px;">'+O_ACT_TITLE[type]+'</div>'+
-          '<div style="color:#ccc;font-size:13px;margin:4px 0;line-height:1.5;">撸到快射了——然后停。不准射。<br>快到了就点下面。</div>'+
+          '<div style="color:#ddd;font-size:14px;margin:4px 0;line-height:1.5;">撸到快射了——然后停。不准射。<br>快到了就点下面。</div>'+
           '<div id="olhb" style="color:'+color+';font-size:36px;min-height:44px;margin:10px 0;transition:transform .3s;"></div>'+
           '<div id="olmsg" style="color:#ffcc80;font-size:14px;min-height:22px;margin:8px 0;"></div>'+
           '<button class="cb" id="olarrive" style="background:'+color+'88;color:#fff;font-size:20px;padding:12px 36px;margin:6px;">快射了</button>'+
@@ -193,7 +193,7 @@ async function po(){
           o_clear_timers();o_clear_video();
           gb.innerHTML='<div style="background:rgba(0,0,0,.7);border-radius:12px;padding:22px;text-align:center;box-shadow:'+glow+';">'+
             '<div style="color:'+color+';font-size:20px;">停。手拿开。</div>'+
-            '<div style="color:#ccc;font-size:13px;margin:6px 0;">没让你射就不准射。</div></div>';
+            '<div style="color:#ddd;font-size:14px;margin:6px 0;">没让你射就不准射。</div></div>';
           setTimeout(function(){_o_qi++;next_q();},1800);
         };
       }else{

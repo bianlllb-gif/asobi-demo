@@ -30,7 +30,7 @@ async function pq(){
 
   await new Promise(function(rs){
     function render_intro(){
-      gb.innerHTML='<div style="color:#ff6b9d;font-size:18px;">足部识图训练</div><div style="color:#ffcc80;font-size:12px;margin-bottom:6px;">—— 苏婉</div><div style="color:#ccc;font-size:13px;line-height:1.6;">你看了那么多张我的脚，现在让我看看你认不认得出来。<br>每张图——选对丝袜类型和脚部位置。每题4秒。<br>重点不是对错，是你在看。认真看。每一寸。<br>准备好了？</div><button class="cb" style="background:#ff6b9d88;color:#fff;margin-top:8px;" id="qstart">开始训练</button>';
+      gb.innerHTML='<div style="color:#ff6b9d;font-size:18px;">足部识图训练</div><div style="color:#ffcc80;font-size:12px;margin-bottom:6px;">—— 苏婉</div><div style="color:#ddd;font-size:14px;line-height:1.6;">你看了那么多张我的脚，现在让我看看你认不认得出来。<br>每张图——选对丝袜类型和脚部位置。每题4秒。<br>重点不是对错，是你在看。认真看。每一寸。<br>准备好了？</div><button class="cb" style="background:#ff6b9d88;color:#fff;margin-top:8px;" id="qstart">开始训练</button>';
       document.getElementById('qstart').onclick=function(){next_question();};
     }
 

@@ -112,7 +112,7 @@ function e_go_edge(){
 function e_go_beat(){
   eState='beat';ePhaseTime=100+Math.floor(Math.random()*300);eMsgTimer=0;eBeatOn=true;
   eBeatTimer=setInterval(e_beat_pulse,eBeatMs[eCurSp]);
-  eBgTimer=setInterval(function(){if(IMG_POOL.length>0&&G&&G.setBg)G.setBg(IMG_POOL[Math.floor(Math.random()*IMG_POOL.length)]);},2000);
+  eBgTimer=setInterval(function(){if(IMG_POOL.length>0&&G&&G.setBg)G.setBg(IMG_POOL[Math.floor(Math.random()*IMG_POOL.length)]);},4000);
   edge_random_bg();
   var bw=document.getElementById('ebarwrap');if(bw)bw.style.display='none';
   var be=document.getElementById('ebeatwrap');if(be)be.style.display='flex';
@@ -177,7 +177,7 @@ function edge_start(){
   e_setup_ui();
   e_go_beat();
   eTick=setInterval(e_loop,100);
-  eBgTimer=setInterval(function(){if(IMG_POOL.length>0&&G&&G.setBg)G.setBg(IMG_POOL[Math.floor(Math.random()*IMG_POOL.length)]);},2000);
+  eBgTimer=setInterval(function(){if(IMG_POOL.length>0&&G&&G.setBg)G.setBg(IMG_POOL[Math.floor(Math.random()*IMG_POOL.length)]);},4000);
 }
 
 function edge_random_bg(){
