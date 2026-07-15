@@ -159,7 +159,7 @@ function e_setup_ui(){
 function e_render(){
   var gb=document.getElementById('gb');
   if(eState==='intro'){
-    gb.innerHTML='<div style="color:#ff6b9d;font-size:18px;">寸止忍耐挑战</div><div style="color:#ffcc80;font-size:12px;margin-bottom:6px;">—— 苏婉</div><div style="color:#ccc;font-size:13px;line-height:1.6;">跟着节拍撸。随时会变快变慢。<br>进度条出现=寸止开始。15秒内80-99%点「忍住」。<br>早了重来。晚了就射。5次全撑住算过关。<br><br>准备好了？</div><button class="cb" style="background:#ff6b9d88;color:#fff;margin-top:8px;" onclick="edge_start()">开始挑战</button>';
+    gb.innerHTML='<div style="color:#ff6b9d;font-size:18px;">寸止忍耐挑战</div><div style="color:#ffcc80;font-size:12px;margin-bottom:6px;">—— 苏婉</div><div style="color:#ddd;font-size:14px;line-height:1.6;">跟着节拍撸。随时会变快变慢。<br>进度条出现=寸止开始。15秒内80-99%点「忍住」。<br>早了重来。晚了就射。5次全撑住算过关。<br><br>准备好了？</div><button class="cb" style="background:#ff6b9d88;color:#fff;margin-top:8px;" onclick="edge_start()">开始挑战</button>';
   }else if(eState==='early'){
     gb.innerHTML='<div style="color:#cc6666;font-size:20px;">太早了</div><div style="color:#ccc;font-size:13px;margin:6px 0;">「'+e_failEarly[Math.floor(Math.random()*e_failEarly.length)]+'」</div><button class="cb" style="background:#ff6b9d88;color:#fff;" onclick="edge_start()">重来</button>';
   }else if(eState==='late'){
