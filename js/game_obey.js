@@ -201,12 +201,12 @@ async function po(){
         var dodgeGuide=type==='dodge'?'<div style="color:rgba(255,255,255,.35);font-size:12px;margin:2px 0;">把鼻子贴上去。闻清楚。</div>':'';
         function render(){
           var pct=remaining/dur, off=Math.round(276*(1-pct));
-          var circ='<svg width="100" height="100" viewBox="0 0 100 100" style="filter:drop-shadow('+glow.split('(')[1].split(')')[0]+');">'+
-            '<circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="3"/>'+
-            '<circle cx="50" cy="50" r="44" fill="none" stroke="'+color+'" stroke-width="3" stroke-dasharray="276" stroke-dashoffset="'+off+'" transform="rotate(-90 50 50)" stroke-linecap="round" style="transition:stroke-dashoffset .9s linear;"/>'+
-            '<text x="50" y="56" text-anchor="middle" fill="#fff" font-size="26" font-weight="bold">'+remaining+'</text></svg>';
-          gb.innerHTML='<div style="background:rgba(0,0,0,.65);border-radius:12px;padding:18px;text-align:center;box-shadow:'+glow+';">'+
-            '<div style="color:'+color+';font-size:18px;margin-bottom:6px;">'+O_ACT_TITLE[type]+'</div>'+
+          var circ='<svg width="60" height="60" viewBox="0 0 100 100" style="filter:drop-shadow('+glow.split('(')[1].split(')')[0]+');">'+
+            '<circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="2"/>'+
+            '<circle cx="50" cy="50" r="44" fill="none" stroke="'+color+'" stroke-width="2" stroke-dasharray="276" stroke-dashoffset="'+off+'" transform="rotate(-90 50 50)" stroke-linecap="round" style="transition:stroke-dashoffset .9s linear;"/>'+
+            '<text x="50" y="55" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">'+remaining+'</text></svg>';
+          gb.innerHTML='<div style="background:rgba(0,0,0,.45);border-radius:10px;padding:10px;text-align:center;box-shadow:'+glow+';">'+
+            '<div style="color:'+color+';font-size:16px;margin-bottom:4px;">'+O_ACT_TITLE[type]+'</div>'+
             circ+dodgeGuide+
             '<div id="olmsg" style="color:#ffcc80;font-size:13px;min-height:20px;margin:6px 0;"></div></div>';
           var em=document.getElementById('olmsg');if(em)em.textContent=lines[li%lines.length];
