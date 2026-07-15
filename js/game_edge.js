@@ -89,7 +89,7 @@ function e_go_edge(){
   e_clear_video();
   var vid=document.createElement('video');
   vid.src=eVideoPool[eVideoIdx%eVideoPool.length];eVideoIdx++;
-  vid.loop=false;vid.autoplay=true;vid.playsInline=true;
+  vid.loop=false;vid.muted=true;vid.autoplay=true;vid.playsInline=true;vid.setAttribute('playsinline','');
   vid.style.cssText='position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:5;opacity:0;transition:opacity .5s;';
   vid.onended=function(){if(eState==='edge'){vid.src=eVideoPool[eVideoIdx%eVideoPool.length];eVideoIdx++;vid.play();}};
   document.getElementById('game').appendChild(vid);
