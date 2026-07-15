@@ -12,14 +12,6 @@ var PAIR=[
   {t:'潮闷。雨水闷在帆布里。',    act:'鞋口对着鼻子。另一只手握鸡巴。上下。',          pool:['帆布鞋','鞋架','运动鞋']}
 ];
 var imgs=[],actPool=[],pairTimes=[];
-// 建全图池(含子目录)
-var ALL_IMGS=IMG_POOL.slice();
-try{
-  var dirs=['images/序章','images/第一天','images/第三天'];
-  for(var di=0;di<dirs.length;di++){
-    var fs=document.querySelectorAll('img'); // 无法列举目录,改用预知方式
-  }
-}catch(e){}
 for(var i=0;i<PAIR.length;i++){
   var pool=[];var kw=PAIR[i].pool;
   for(var j=0;j<IMG_POOL.length;j++){
