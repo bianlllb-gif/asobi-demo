@@ -17,6 +17,12 @@ var SOCKS=['黑丝','白丝','肉丝','无丝袜','棉袜'];
 var PARTS=['脚趾','脚心','脚跟','脚踝','全脚','小腿'];
 
 function q_get_pool(){return IMG_POOL;}
+function q_match_img(sock){
+  var kw={黑丝:['黑丝','连裤袜'],白丝:['白丝'],肉丝:['肉丝'],无丝袜:['赤足','未穿丝袜'],棉袜:['棉袜','短袜','罗纹袜']};
+  var keys=kw[sock]||[];
+  var pool=[];for(var j=0;j<IMG_POOL.length;j++){for(var k=0;k<keys.length;k++){if(IMG_POOL[j].indexOf(keys[k])!==-1){pool.push(IMG_POOL[j]);break;}}}
+  return pool.length>0?pool[Math.floor(Math.random()*pool.length)]:IMG_POOL[Math.floor(Math.random()*IMG_POOL.length)];
+}
 
 async function pq(){
   var pool=q_get_pool();
@@ -38,7 +44,7 @@ async function pq(){
       if(qi>=10){show_result();return;}
       curSock='';curPart='';timeLeft=4;
       var q=questions[qi];
-      var img=pool[Math.floor(Math.random()*pool.length)];
+      var img=q_match_img(q.sock);
       render_question(q,img);
       clearInterval(timerId);
       timerId=setInterval(function(){
